@@ -8,4 +8,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  modules: ['@pinia/nuxt'],
+  components: {
+    global: true,
+    dirs: ['~/components'],
+  },
 });

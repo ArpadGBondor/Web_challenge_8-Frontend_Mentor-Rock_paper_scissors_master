@@ -16,4 +16,5 @@ module.exports = {
     },
   },
   plugins: [],
+  content: ['./{pages,components,stores}/**/*.{html,js,ts,vue}'],
 };
