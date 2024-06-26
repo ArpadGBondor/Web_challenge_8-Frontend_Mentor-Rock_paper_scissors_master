@@ -1,32 +1,50 @@
 <template>
-  <section
-    class="bg-dark-blue flex flex-col justify-center items-center h-screen w-screen text-white static"
-  >
+  <div>
     <h1 class="text-4xl text-bold">Test</h1>
-    <form class="m-8" @submit="onSubmit">
-      <input
-        class="text-dark-blue p-2 text-xl"
-        type="text"
-        name="message"
-        id="message"
-        v-model="message"
-      />
+    <form class="m-8 w-100" @submit="onSubmit">
+      <div class="flex justify-between items-center w-full">
+        <label class="m-4" for="message">Send Notification</label>
+        <input
+          class="text-dark-blue p-2 text-xl m-4 p-2"
+          type="text"
+          name="message"
+          id="message"
+          v-model="message"
+        />
+      </div>
+      <div class="flex justify-between items-center w-full">
+        <label class="m-4" for="increment">Add Score</label>
+        <input
+          type="button"
+          name="increment"
+          value="Increment"
+          @click="onIncrement"
+          class="bg-white text-dark-blue m-4 p-2"
+        />
+      </div>
     </form>
-    <NotificationsNotification />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { NotificationsNotification } from '#components';
 import { useNotifyStore, NotificationType } from '../stores/notify.store';
+import { useGameStore } from '../stores/game.store';
+
+definePageMeta({
+  layout: 'default',
+});
 
 const notifyStore = useNotifyStore();
+const gameStore = useGameStore();
 
 let message = '';
 
 const onSubmit = (event: any) => {
   event.preventDefault();
 
-  notifyStore.notify(message, NotificationType.Info);
+  notifyStore.notify(message, NotificationType.Error);
+};
+const onIncrement = () => {
+  gameStore.increment();
 };
 </script>

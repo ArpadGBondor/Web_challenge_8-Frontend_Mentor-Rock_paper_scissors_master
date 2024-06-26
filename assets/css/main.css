@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'BarlowSemiCondensed-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/BarlowSemiCondensed-SemiBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'BarlowSemiCondensed-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/BarlowSemiCondensed-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'BarlowSemiCondensed-ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/BarlowSemiCondensed-ExtraBold.ttf') format('truetype');
+  }
+}
