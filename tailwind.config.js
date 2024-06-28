@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        modal: 'rgba(0, 0, 0, 0.35)',
+      },
       colors: {
         'dark-blue': 'rgb(24, 36, 66)',
         'border-gray': 'rgba(127,127,127,0.5)',

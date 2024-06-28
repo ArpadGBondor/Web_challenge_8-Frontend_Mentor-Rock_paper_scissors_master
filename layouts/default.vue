@@ -5,11 +5,18 @@
     <Header />
     <NuxtPage />
     <Notifications />
+    <Modal :show="showRules" @update:show="gameStore.setShowRules($event)">
+      <Rules />
+    </Modal>
   </div>
 </template>
 
-<script>
-import { Header, Notifications } from '#components';
+<script setup>
+import { Header, Notifications, Modal, Rules } from '#components';
+import { storeToRefs } from 'pinia';
+import { useGameStore } from '../stores/game.store';
+const gameStore = useGameStore();
+const { showRules } = storeToRefs(gameStore);
 </script>
 
 <style></style>
