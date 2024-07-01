@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-white h-[18.5rem] w-[18rem]">
+  <div class="bg-white h-[23.45rem] w-[23rem]">
     <h2
-      class="text-gray-700 text-[1.60rem] ml-[0.6rem] mt-[0.2rem] font-[BarlowSemiCondensed-Bold] uppercase"
+      class="text-gray-700 text-[2rem] ml-[0.9rem] mt-[0.5rem] font-[BarlowSemiCondensed-Bold] uppercase"
     >
       Rules
     </h2>
-    <Rules class="ml-[-0.45rem] mt-[0.3rem] scale-[0.8]" />
+    <Rules class="ml-[2rem] mt-[2.5rem]" />
   </div>
 </template>
 

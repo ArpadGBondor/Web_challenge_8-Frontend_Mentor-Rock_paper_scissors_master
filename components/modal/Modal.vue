@@ -5,12 +5,12 @@
     class="fixed top-0 left-0 w-full h-full bg-modal flex justify-center items-center z-[1000]"
     @click.self="closeModal"
   >
-    <div class="bg-white p-4 rounded-md min-h-20 min-w-20 relative">
+    <div class="bg-white p-4 rounded-lg min-h-20 min-w-20 relative">
       <button
-        class="absolute top-[1.9rem] right-[1.6rem] cursor-pointer"
+        class="absolute top-[2.3rem] right-[2rem] cursor-pointer"
         @click="closeModal"
       >
-        <img class="w-4 h-4" :src="iconClose" alt="Close Icon" />
+        <img class="w-5 h-5" :src="iconClose" alt="Close Icon" />
       </button>
       <div>
         <slot></slot>
