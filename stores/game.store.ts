@@ -8,7 +8,7 @@ interface State {
 export const useGameStore = defineStore('game', {
   state: (): State => ({
     score: 0,
-    showRules: true,
+    showRules: false,
   }),
   actions: {
     increment() {
