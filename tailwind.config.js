@@ -23,10 +23,10 @@ module.exports = {
         '30vh': '30vh',
       },
       left: {
-        'wide-middle': 'calc(50% - 12.5rem)',
+        'wide-middle': 'calc(50% - 22rem)',
       },
       width: {
-        wide: '35rem',
+        wide: '44rem',
       },
     },
   },
