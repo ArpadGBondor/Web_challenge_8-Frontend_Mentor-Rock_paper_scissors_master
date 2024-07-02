@@ -5,7 +5,7 @@
       <div class="flex justify-between items-center w-full">
         <label class="m-4" for="message">Send Notification</label>
         <input
-          class="text-dark-blue p-2 text-xl m-4 p-2"
+          class="text-score-text p-2 text-xl m-4 p-2"
           type="text"
           name="message"
           id="message"
@@ -19,14 +19,18 @@
           name="increment"
           value="Increment"
           @click="onIncrement"
-          class="bg-white text-dark-blue m-4 p-2"
+          class="bg-white text-score-text m-4 p-2"
         />
       </div>
     </form>
   </div>
+  <div class="m-2 p-2 border-[1px] border-white">
+    <Paper />
+  </div>
 </template>
 
 <script setup lang="ts">
+import { Paper } from '#components';
 import { useNotifyStore, NotificationType } from '../stores/notify.store';
 import { useGameStore } from '../stores/game.store';
 

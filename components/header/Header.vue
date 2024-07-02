@@ -10,11 +10,11 @@
     <div
       class="bg-white text-dark-blue mx-[1rem] my-[0.5rem] p-2 w-[9.25rem] rounded-md flex flex-col items-center justify-center"
     >
-      <div class="text-blue-700 text-[1.1rem] leading-[1.2] tracking-widest">
+      <div class="text-score-text text-[1.1rem] leading-[1.2] tracking-widest">
         Score
       </div>
       <div
-        class="text-gray-600 text-[4rem] leading-none font-[BarlowSemiCondensed-Bold]"
+        class="text-dark-text text-[4rem] leading-none font-[BarlowSemiCondensed-Bold]"
       >
         {{ `${score}` }}
       </div>

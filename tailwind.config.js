@@ -14,8 +14,9 @@ module.exports = {
         modal: 'rgba(0, 0, 0, 0.35)',
       },
       colors: {
-        'dark-blue': 'rgb(24, 36, 66)',
-        'border-gray': 'rgba(127,127,127,0.5)',
+        'border-gray': 'hsl(217, 16%, 45%)',
+        'score-text': 'hsl(229, 64%, 46%)',
+        'dark-text': 'hsl(229, 25%, 31%)',
       },
       height: {
         '10vh': '10vh',
@@ -27,6 +28,10 @@ module.exports = {
       },
       width: {
         wide: '44rem',
+      },
+      boxShadow: {
+        'paper-inner': 'inset 0 0.25rem rgba(0, 0, 0, 0.15)',
+        paper: '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(230, 89%, 62%)',
       },
     },
   },

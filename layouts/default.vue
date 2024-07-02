@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-dark-blue flex flex-col justify-center items-center h-screen w-screen text-white static font-[BarlowSemiCondensed-SemiBold]"
+    class="bg-game flex flex-col justify-center items-center h-screen w-screen text-white static font-[BarlowSemiCondensed-SemiBold]"
   >
     <Header />
     <NuxtPage />
@@ -20,4 +20,12 @@ const gameStore = useGameStore();
 const { showRules } = storeToRefs(gameStore);
 </script>
 
-<style></style>
+<style>
+.bg-game {
+  background: radial-gradient(
+    circle at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+</style>
