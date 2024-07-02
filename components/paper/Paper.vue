@@ -18,10 +18,6 @@ import Paper from '../../assets/images/icon-paper.svg';
 
 <style>
 .bg-paper {
-  background: radial-gradient(
-    circle at 50% 0%,
-    hsl(230, 89%, 65%),
-    hsl(230, 89%, 62%)
-  );
+  background: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
 }
 </style>
