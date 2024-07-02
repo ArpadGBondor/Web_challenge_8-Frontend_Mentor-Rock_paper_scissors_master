@@ -30,11 +30,36 @@ module.exports = {
         wide: '44rem',
       },
       boxShadow: {
-        'paper-inner': 'inset 0 0.25rem rgba(0, 0, 0, 0.15)',
-        paper: '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(230, 89%, 62%)',
+        'disk-inner-sm': 'inset 0 0.3rem rgba(0, 0, 0, 0.15)',
+        'disk-inner-md': 'inset 0 0.5rem rgba(0, 0, 0, 0.15)',
+        'disk-inner-lg': 'inset 0 0.75rem rgba(0, 0, 0, 0.15)',
+        'rock-sm': '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(349, 71%, 52%)',
+        'paper-sm': '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(230, 89%, 62%)',
+        'scissors-sm':
+          '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(39, 89%, 49%)',
+        'rock-md': '0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%)',
+        'paper-md':
+          '0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(230, 89%, 62%)',
+        'scissors-md':
+          '0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(39, 89%, 49%)',
+        'rock-lg': '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(349, 71%, 52%)',
+        'paper-lg': '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(230, 89%, 62%)',
+        'scissors-lg':
+          '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(39, 89%, 49%)',
       },
     },
   },
   plugins: [],
   content: ['./{pages,components,layouts,stores}/**/*.{html,js,ts,vue}'],
+  safelist: [
+    'shadow-rock-sm',
+    'shadow-paper-sm',
+    'shadow-scissors-sm',
+    'shadow-rock-md',
+    'shadow-paper-md',
+    'shadow-scissors-md',
+    'shadow-rock-lg',
+    'shadow-paper-lg',
+    'shadow-scissors-lg',
+  ],
 };
