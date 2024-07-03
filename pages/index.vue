@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[16rem] overflow-scroll w-full">
+  <div class="mt-[16rem] mb-[6rem] overflow-scroll w-full">
     <div>
       <h1 class="text-4xl text-bold">Test</h1>
       <form class="m-8 max-w-2xl" @submit="onSubmit">

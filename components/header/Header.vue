@@ -1,6 +1,6 @@
 <template>
   <section
-    class="absolute top-[3rem] left-wide-middle w-wide border-[3px] border-border-gray rounded-2xl p-2 flex flex-row justify-between items-stretch uppercase"
+    class="absolute top-[3rem] self-center w-[44rem] border-[3px] border-border-gray rounded-2xl p-2 flex flex-row justify-between items-stretch uppercase"
   >
     <h2
       class="font-semibold leading-[0.8] mx-6 mt-[0.9rem] mb-[1.2rem] text-[2.5rem]"

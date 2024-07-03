@@ -24,12 +24,6 @@ module.exports = {
         '20vh': '20vh',
         '30vh': '30vh',
       },
-      left: {
-        'wide-middle': 'calc(50% - 22rem)',
-      },
-      width: {
-        wide: '44rem',
-      },
       boxShadow: {
         'disk-inner-sm': 'inset 0 0.3rem rgba(0, 0, 0, 0.15)',
         'disk-inner-md': 'inset 0 0.5rem rgba(0, 0, 0, 0.15)',
