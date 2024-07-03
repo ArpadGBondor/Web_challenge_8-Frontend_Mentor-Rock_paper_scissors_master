@@ -109,14 +109,4 @@ const getImageSize = computed(() => {
 });
 </script>
 
-<style>
-.bg-rock {
-  background: linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%));
-}
-.bg-paper {
-  background: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
-}
-.bg-scissors {
-  background: linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%));
-}
-</style>
+<style></style>

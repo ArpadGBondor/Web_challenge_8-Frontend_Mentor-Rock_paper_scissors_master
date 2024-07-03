@@ -20,12 +20,4 @@ const gameStore = useGameStore();
 const { showRules } = storeToRefs(gameStore);
 </script>
 
-<style>
-.bg-game {
-  background: radial-gradient(
-    circle at 50% 0%,
-    hsl(214, 47%, 23%),
-    hsl(237, 49%, 15%)
-  );
-}
-</style>
+<style></style>

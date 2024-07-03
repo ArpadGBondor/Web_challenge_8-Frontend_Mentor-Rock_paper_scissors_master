@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
-    './error.vue',
+    './{pages,components,layouts,plugins,stores}/**/*.{html,js,ts,vue}',
   ],
   theme: {
     extend: {
       backgroundColor: {
         modal: 'rgba(0, 0, 0, 0.35)',
+      },
+      backgroundImage: {
+        game: 'radial-gradient( circle at 50% 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%) )',
+        rock: 'linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%))',
+        paper: 'linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%))',
+        scissors: 'linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%))',
       },
       colors: {
         'border-gray': 'hsl(217, 16%, 45%)',
@@ -49,8 +50,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-  content: ['./{pages,components,layouts,stores}/**/*.{html,js,ts,vue}'],
   safelist: [
     'shadow-rock-sm',
     'shadow-paper-sm',
@@ -62,4 +61,5 @@ module.exports = {
     'shadow-paper-lg',
     'shadow-scissors-lg',
   ],
+  plugins: [],
 };
