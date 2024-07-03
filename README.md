@@ -24,6 +24,10 @@ Users should be able to:
 - I want to practise Vue 3 and Nuxt 3 state management
 - I want to create a "mobile first" design, and only using Tailwind without any custom CSS
 
+## Highlights
+
+- I created a single Disk component that can be called with different `type` prop values to show a `rock`, `paper` or `scissors` component, and I added a `size` prop, so it can create a `sm`, `md` or `lg` component.
+
 ## Author
 
 - Github - [Arpad G. Bondor](https://github.com/ArpadGBondor)
