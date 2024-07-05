@@ -23,6 +23,7 @@ module.exports = {
         '10vh': '10vh',
         '20vh': '20vh',
         '30vh': '30vh',
+        'play-area': 'calc(100vh - 20rem)',
       },
       boxShadow: {
         'disk-inner-sm': 'inset 0 0.3rem rgba(0, 0, 0, 0.15)',
@@ -41,6 +42,10 @@ module.exports = {
         'paper-lg': '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(230, 89%, 62%)',
         'scissors-lg':
           '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(39, 89%, 49%)',
+      },
+      transitionProperty: {
+        'top-left': 'top, left',
+        'top-left-width-height-opacity': 'top, left, width, height, opacity',
       },
     },
   },

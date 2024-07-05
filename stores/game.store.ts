@@ -30,6 +30,28 @@ interface State {
   outcome: OutcomeType;
 }
 
+const loadScore = (): number => {
+  try {
+    const jsonString = localStorage.getItem('score');
+    if (jsonString) {
+      return JSON.parse(jsonString) as number;
+    }
+    return 0;
+  } catch (error) {
+    console.error('Error reading from local storage', error);
+    return 0;
+  }
+};
+
+const saveScore = (score: number) => {
+  try {
+    const jsonString = JSON.stringify(score);
+    localStorage.setItem('score', jsonString);
+  } catch (error) {
+    console.error('Error saving to local storage', error);
+  }
+};
+
 export const useGameStore = defineStore('game', {
   state: (): State => ({
     score: 0,
@@ -40,6 +62,9 @@ export const useGameStore = defineStore('game', {
     outcome: OutcomeType.None,
   }),
   actions: {
+    initialiseStore() {
+      this.score = loadScore();
+    },
     setShowRules(_showRules: boolean) {
       this.showRules = _showRules;
     },
@@ -97,6 +122,7 @@ export const useGameStore = defineStore('game', {
             this.outcome = OutcomeType.Draw;
           }
           this.stage = StageType.Over;
+          saveScore(this.score);
         };
 
         setTimeout(showOutcome, 2000);

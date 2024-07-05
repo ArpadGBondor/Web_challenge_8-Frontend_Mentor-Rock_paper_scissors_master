@@ -1,14 +1,29 @@
 <template>
-  <div class="relative" :class="getSizeMeasures1">
+  <div class="relative w-0 h-0 flex justify-center items-center">
     <div
-      class="absolute top-0 left-0 rounded-full"
-      :class="[getTypeColours, getSizeMeasures2, `shadow-${type}-${size}`]"
+      class="absolute rounded-full transition-top-left-width-height-opacity duration-1000 opacity-0"
+      :class="[
+        getPositions2,
+        getTypeColours,
+        getSizeMeasures2,
+        `shadow-${type}-${size}`,
+        { 'opacity-100': !invisible },
+      ]"
     >
       <div
-        class="bg-white absolute rounded-full flex justify-center items-center"
-        :class="getSizeMeasures3"
+        class="bg-white absolute rounded-full flex justify-center items-center transition-all duration-1000 opacity-0"
+        :class="[
+          { 'opacity-100': !invisible },
+          getPositions3,
+          getSizeMeasures3,
+        ]"
       >
-        <img :src="getTypeImage" alt="Paper image" :class="getImageSize" />
+        <img
+          :src="getTypeImage"
+          alt="Paper image"
+          class="transition-all duration-1000"
+          :class="getImageSize"
+        />
       </div>
     </div>
   </div>
@@ -31,6 +46,10 @@ const props = defineProps({
     type: String,
     default: 'paper',
     validator: (value) => ['rock', 'paper', 'scissors'].includes(value),
+  },
+  invisible: {
+    type: Boolean,
+    default: false,
   },
 });
 
@@ -67,6 +86,18 @@ const getSizeMeasures1 = computed(() => {
       return 'w-[12.5rem] h-[13rem]';
     case 'lg':
       return 'w-[18.5rem] h-[19rem]';
+    default:
+      return '';
+  }
+});
+const getPositions2 = computed(() => {
+  switch (props.size) {
+    case 'sm':
+      return 'left-[-4.25rem] top-[-4.25rem]';
+    case 'md':
+      return 'left-[-6.25rem] top-[-6.25rem]';
+    case 'lg':
+      return 'left-[-9.25rem] top-[-9.25rem]';
     default:
       return '';
   }
