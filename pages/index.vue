@@ -11,6 +11,63 @@
       />
     </div>
     <div class="relative left-center top-center w-0 h-0 overflow-visible">
+      <div
+        class="relative w-0 h-0 flex justify-center items-center transition-top-left duration-1000"
+        :class="[
+          {
+            'left-[-100rem] top-[-10rem]': stage === StageType.PlayerChoice,
+          },
+          {
+            'left-[-11rem] top-[-10rem]': stage !== StageType.PlayerChoice,
+          },
+        ]"
+      >
+        <p
+          class="text-white text-2xl text-nowrap tracking-widest uppercase absolute text-center"
+        >
+          You picked
+        </p>
+      </div>
+    </div>
+    <div class="relative left-center top-center w-0 h-0 overflow-visible">
+      <div
+        class="relative w-0 h-0 flex justify-center items-center transition-top-left duration-1000"
+        :class="[
+          {
+            'left-[100rem] top-[-10rem]': stage === StageType.PlayerChoice,
+          },
+          {
+            'left-[11rem] top-[-10rem]': stage !== StageType.PlayerChoice,
+          },
+        ]"
+      >
+        <p
+          class="text-white text-2xl text-nowrap tracking-widest uppercase absolute text-center"
+        >
+          The house picked
+        </p>
+      </div>
+    </div>
+    <!-- Stage 2 - House picked - shadow -->
+    <div class="relative left-center top-center w-0 h-0 overflow-visible">
+      <div
+        class="relative w-0 h-0 flex justify-center items-center transition-opacity duration-1000 left-[11rem] top-[4rem] overflow-visible"
+        :class="[
+          {
+            'opacity-15': stage === StageType.ComputerChoice,
+          },
+          {
+            'opacity-0': stage !== StageType.ComputerChoice,
+          },
+        ]"
+      >
+        <div
+          class="absolute bg-black w-[14.5rem] h-[14.5rem] rounded-full"
+        ></div>
+      </div>
+    </div>
+
+    <div class="relative left-center top-center w-0 h-0 overflow-visible">
       <Disk
         :type="
           computer === ChoiceType.Rock
@@ -21,7 +78,7 @@
         "
         size="lg"
         :invisible="computer === ChoiceType.None"
-        class="left-[11rem] top-0"
+        class="left-[11rem] top-[4rem]"
       />
     </div>
     <div
@@ -37,7 +94,7 @@
             'left-[-9rem] top-[-7rem] cursor-pointer':
               stage === StageType.PlayerChoice,
           },
-          { 'left-[-11rem] top-0': stage !== StageType.PlayerChoice },
+          { 'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice },
         ]"
         @click="onPaperChoice"
       />
@@ -56,7 +113,7 @@
               stage === StageType.PlayerChoice,
           },
           {
-            'left-[-11rem] top-0': stage !== StageType.PlayerChoice,
+            'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice,
           },
         ]"
         @click="onScissorsChoice"
@@ -75,7 +132,7 @@
             'left-0 top-[7rem] cursor-pointer':
               stage === StageType.PlayerChoice,
           },
-          { 'left-[-11rem] top-0': stage !== StageType.PlayerChoice },
+          { 'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice },
         ]"
         @click="onRockChoice"
       />
