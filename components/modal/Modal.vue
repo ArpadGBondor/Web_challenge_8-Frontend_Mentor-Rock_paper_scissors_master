@@ -21,7 +21,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import iconClose from '../../assets/images/icon-close.svg';
+import iconClose from '~/assets/images/icon-close.svg';
 
 const props = defineProps({
   show: {

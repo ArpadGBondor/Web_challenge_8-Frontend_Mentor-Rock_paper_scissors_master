@@ -23,7 +23,7 @@ import {
   Footer,
 } from '#components';
 import { storeToRefs } from 'pinia';
-import { useGameStore } from '../stores/game.store';
+import { useGameStore } from '~/stores/game.store';
 const gameStore = useGameStore();
 const { showRules } = storeToRefs(gameStore);
 </script>

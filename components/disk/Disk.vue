@@ -28,9 +28,9 @@
 <script setup>
 import { computed } from 'vue';
 
-import Rock from '../../assets/images/icon-rock.svg';
-import Paper from '../../assets/images/icon-paper.svg';
-import Scissors from '../../assets/images/icon-scissors.svg';
+import Rock from '~/assets/images/icon-rock.svg';
+import Paper from '~/assets/images/icon-paper.svg';
+import Scissors from '~/assets/images/icon-scissors.svg';
 
 const props = defineProps({
   size: {

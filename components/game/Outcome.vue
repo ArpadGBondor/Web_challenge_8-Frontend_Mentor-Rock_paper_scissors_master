@@ -13,15 +13,14 @@
     >
       <div>
         <p
-          class="font-semibold text-white text-[3.5rem] text-nowrap uppercase text-center"
-        >
-          {{ getOutcomeText }}
-        </p>
+          class="font-semibold text-white text-[3.5rem] uppercase text-center"
+          v-html="getOutcomeText"
+        />
         <button
-          class="bg-white text-dark-text hover:text-red-500 text text-nowrap block uppercase w-full text-center p-3 mt-2 rounded-lg text-[1rem] tracking-widest cursor-pointer"
+          class="bg-white text-dark-text hover:text-red-500 text block uppercase w-full text-center p-3 mt-2 rounded-lg text-[1rem] tracking-widest cursor-pointer"
           @click="onNewGame"
         >
-          Play again
+          Play&nbsp;again
         </button>
       </div>
     </div>
@@ -31,7 +30,7 @@
 <script setup>
 import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
-import { useGameStore, StageType, OutcomeType } from '../stores/game.store';
+import { useGameStore, StageType, OutcomeType } from '~/stores/game.store';
 
 const gameStore = useGameStore();
 const { outcome, stage } = storeToRefs(gameStore);
@@ -39,9 +38,9 @@ const { outcome, stage } = storeToRefs(gameStore);
 const getOutcomeText = computed(() => {
   switch (outcome.value) {
     case OutcomeType.Won:
-      return 'You win';
+      return 'You&nbsp;win';
     case OutcomeType.Lost:
-      return 'You lose';
+      return 'You&nbsp;lose';
     case OutcomeType.Draw:
       return 'Draw';
     default:

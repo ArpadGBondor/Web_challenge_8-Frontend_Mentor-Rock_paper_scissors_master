@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import Rules from '../svg/Rules.vue';
+import { Rules } from '#components';
 </script>
 
 <style></style>
