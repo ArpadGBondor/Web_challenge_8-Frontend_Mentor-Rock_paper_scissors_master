@@ -1,12 +1,12 @@
 <template>
-  <div class="relative w-0 h-0 flex justify-center items-center">
+  <div class="relative w-0 h-0 rounded-full flex justify-center items-center">
     <div
-      class="absolute rounded-full transition-top-left-width-height-opacity duration-1000 opacity-0"
+      class="absolute rounded-full transition-top-left-width-height-opacity-shadow duration-1000 opacity-0"
       :class="[
         getPositions2,
         getTypeColours,
         getSizeMeasures2,
-        `shadow-${type}-${size}`,
+        `shadow-${type}-${size}${winnerHighlight ? '-winner' : ''}`,
         { 'opacity-100': !invisible },
       ]"
     >
@@ -44,10 +44,14 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: 'paper',
-    validator: (value) => ['rock', 'paper', 'scissors'].includes(value),
+    default: 'none',
+    validator: (value) => ['rock', 'paper', 'scissors', 'none'].includes(value),
   },
   invisible: {
+    type: Boolean,
+    default: false,
+  },
+  winnerHighlight: {
     type: Boolean,
     default: false,
   },

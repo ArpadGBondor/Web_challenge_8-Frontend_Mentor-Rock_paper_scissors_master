@@ -18,8 +18,10 @@
             'left-[-100rem] top-[-10rem]': stage === StageType.PlayerChoice,
           },
           {
-            'left-[-11rem] top-[-10rem]': stage !== StageType.PlayerChoice,
+            'left-[-11rem] top-[-10rem]':
+              stage !== StageType.PlayerChoice && stage !== StageType.Over,
           },
+          { 'left-[-19rem] top-[-10rem]': stage === StageType.Over },
         ]"
       >
         <p
@@ -37,8 +39,10 @@
             'left-[100rem] top-[-10rem]': stage === StageType.PlayerChoice,
           },
           {
-            'left-[11rem] top-[-10rem]': stage !== StageType.PlayerChoice,
+            'left-[11rem] top-[-10rem]':
+              stage !== StageType.PlayerChoice && stage !== StageType.Over,
           },
+          { 'left-[19rem] top-[-10rem]': stage === StageType.Over },
         ]"
       >
         <p
@@ -66,7 +70,7 @@
         ></div>
       </div>
     </div>
-
+    <!-- The House Picked -->
     <div class="relative left-center top-center w-0 h-0 overflow-visible">
       <Disk
         :type="
@@ -74,11 +78,18 @@
             ? 'rock'
             : computer === ChoiceType.Paper
             ? 'paper'
-            : 'scissors'
+            : computer === ChoiceType.Scissors
+            ? 'scissors'
+            : 'none'
         "
         size="lg"
         :invisible="computer === ChoiceType.None"
-        class="left-[11rem] top-[4rem]"
+        class="transition-top-left duration-1000"
+        :class="[
+          { 'left-[11rem] top-[4rem]': stage !== StageType.Over },
+          { 'left-[19rem] top-[4rem]': stage === StageType.Over },
+        ]"
+        :winner-highlight="outcome === OutcomeType.Lost"
       />
     </div>
     <div
@@ -94,8 +105,15 @@
             'left-[-9rem] top-[-7rem] cursor-pointer':
               stage === StageType.PlayerChoice,
           },
-          { 'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice },
+          {
+            'left-[-11rem] top-[4rem]':
+              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+          },
+          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
         ]"
+        :winner-highlight="
+          outcome === OutcomeType.Won && player === ChoiceType.Paper
+        "
         @click="onPaperChoice"
       />
     </div>
@@ -113,9 +131,14 @@
               stage === StageType.PlayerChoice,
           },
           {
-            'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice,
+            'left-[-11rem] top-[4rem]':
+              stage !== StageType.PlayerChoice && stage !== StageType.Over,
           },
+          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
         ]"
+        :winner-highlight="
+          outcome === OutcomeType.Won && player === ChoiceType.Scissors
+        "
         @click="onScissorsChoice"
       />
     </div>
@@ -132,8 +155,15 @@
             'left-0 top-[7rem] cursor-pointer':
               stage === StageType.PlayerChoice,
           },
-          { 'left-[-11rem] top-[4rem]': stage !== StageType.PlayerChoice },
+          {
+            'left-[-11rem] top-[4rem]':
+              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+          },
+          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
         ]"
+        :winner-highlight="
+          outcome === OutcomeType.Won && player === ChoiceType.Rock
+        "
         @click="onRockChoice"
       />
     </div>
@@ -144,7 +174,12 @@
 import { Disk } from '#components';
 import { storeToRefs } from 'pinia';
 import { useNotifyStore, NotificationType } from '../stores/notify.store';
-import { useGameStore, ChoiceType, StageType } from '../stores/game.store';
+import {
+  useGameStore,
+  ChoiceType,
+  StageType,
+  OutcomeType,
+} from '../stores/game.store';
 import TriangleImage from '../assets/images/bg-triangle.svg';
 
 const notifyStore = useNotifyStore();
