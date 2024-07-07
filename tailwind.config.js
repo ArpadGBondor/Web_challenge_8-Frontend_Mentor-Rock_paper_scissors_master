@@ -66,6 +66,7 @@ module.exports = {
       },
       transitionProperty: {
         'top-left': 'top, left',
+        'top-left-opacity': 'top, left, opacity',
         'top-left-width-height-opacity': 'top, left, width, height, opacity',
         'top-left-width-height-opacity-shadow':
           'top, left, width, height, opacity, box-shadow',

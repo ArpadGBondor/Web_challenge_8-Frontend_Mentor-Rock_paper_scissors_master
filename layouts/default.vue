@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-game flex flex-col justify-center items-center h-screen w-screen text-white static font-[BarlowSemiCondensed-SemiBold]"
+    class="bg-game flex flex-col justify-center items-center h-screen w-screen text-white absolute top-0 left-0 font-[BarlowSemiCondensed-SemiBold] overflow-hidden"
   >
     <Header />
     <NuxtPage />

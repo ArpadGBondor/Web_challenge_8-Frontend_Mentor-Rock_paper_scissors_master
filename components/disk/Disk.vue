@@ -12,11 +12,7 @@
     >
       <div
         class="bg-white absolute rounded-full flex justify-center items-center transition-all duration-1000 opacity-0"
-        :class="[
-          { 'opacity-100': !invisible },
-          getPositions3,
-          getSizeMeasures3,
-        ]"
+        :class="[{ 'opacity-100': !invisible }, getSizeMeasures3]"
       >
         <img
           :src="getTypeImage"
@@ -137,7 +133,7 @@ const getImageSize = computed(() => {
     case 'md':
       return 'w-[4.5rem]';
     case 'lg':
-      return 'w-[6rem]';
+      return 'w-[6.25rem]';
     default:
       return '';
   }

@@ -12,16 +12,29 @@
     </div>
     <div class="relative left-center top-center w-0 h-0 overflow-visible">
       <div
-        class="relative w-0 h-0 flex justify-center items-center transition-top-left duration-1000"
+        class="relative w-0 h-0 flex justify-center items-center transition-top-left-opacity duration-1000"
         :class="[
           {
-            'left-[-100rem] top-[-10rem]': stage === StageType.PlayerChoice,
+            'left-[-100vw] top-[-10rem]': player === ChoiceType.None,
           },
           {
             'left-[-11rem] top-[-10rem]':
-              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+              player !== ChoiceType.None &&
+              (stage === StageType.PlayerChoice ||
+                stage === StageType.ComputerChoice ||
+                stage === StageType.Results),
           },
-          { 'left-[-19rem] top-[-10rem]': stage === StageType.Over },
+          {
+            'left-[-21rem] top-[-10rem]':
+              stage === StageType.Over ||
+              (stage === StageType.NewGame && player !== ChoiceType.None),
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
       >
         <p
@@ -33,16 +46,29 @@
     </div>
     <div class="relative left-center top-center w-0 h-0 overflow-visible">
       <div
-        class="relative w-0 h-0 flex justify-center items-center transition-top-left duration-1000"
+        class="relative w-0 h-0 flex justify-center items-center transition-top-left-opacity duration-1000"
         :class="[
           {
-            'left-[100rem] top-[-10rem]': stage === StageType.PlayerChoice,
+            'left-[100vw] top-[-10rem]': player === ChoiceType.None,
           },
           {
             'left-[11rem] top-[-10rem]':
-              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+              player !== ChoiceType.None &&
+              (stage === StageType.PlayerChoice ||
+                stage === StageType.ComputerChoice ||
+                stage === StageType.Results),
           },
-          { 'left-[19rem] top-[-10rem]': stage === StageType.Over },
+          {
+            'left-[19rem] top-[-10rem]':
+              stage === StageType.Over ||
+              (stage === StageType.NewGame && player !== ChoiceType.None),
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
       >
         <p
@@ -83,11 +109,23 @@
             : 'none'
         "
         size="lg"
-        :invisible="computer === ChoiceType.None"
-        class="transition-top-left duration-1000"
+        :invisible="computer === ChoiceType.None || stage === StageType.NewGame"
+        class="transition-top-left-opacity duration-1000"
         :class="[
-          { 'left-[11rem] top-[4rem]': stage !== StageType.Over },
-          { 'left-[19rem] top-[4rem]': stage === StageType.Over },
+          {
+            'left-[11rem] top-[4rem]':
+              stage !== StageType.Over && stage !== StageType.NewGame,
+          },
+          {
+            'left-[19rem] top-[4rem]':
+              stage === StageType.Over || stage === StageType.NewGame,
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
         :winner-highlight="outcome === OutcomeType.Lost"
       />
@@ -99,7 +137,8 @@
       <Disk
         type="paper"
         :size="stage === StageType.PlayerChoice ? 'md' : 'lg'"
-        class="transition-top-left duration-1000"
+        class="transition-top-left-opacity duration-1000"
+        :invisible="stage === StageType.NewGame"
         :class="[
           {
             'left-[-9rem] top-[-7rem] cursor-pointer':
@@ -107,9 +146,20 @@
           },
           {
             'left-[-11rem] top-[4rem]':
-              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+              stage !== StageType.PlayerChoice &&
+              stage !== StageType.Over &&
+              stage !== StageType.NewGame,
           },
-          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
+          {
+            'left-[-21rem] top-[4rem]':
+              stage === StageType.Over || stage === StageType.NewGame,
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
         :winner-highlight="
           outcome === OutcomeType.Won && player === ChoiceType.Paper
@@ -124,7 +174,8 @@
       <Disk
         type="scissors"
         :size="stage === StageType.PlayerChoice ? 'md' : 'lg'"
-        class="transition-top-left duration-1000"
+        class="transition-top-left-opacity duration-1000"
+        :invisible="stage === StageType.NewGame"
         :class="[
           {
             'left-[9rem] top-[-7rem] cursor-pointer':
@@ -132,9 +183,20 @@
           },
           {
             'left-[-11rem] top-[4rem]':
-              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+              stage !== StageType.PlayerChoice &&
+              stage !== StageType.Over &&
+              stage !== StageType.NewGame,
           },
-          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
+          {
+            'left-[-21rem] top-[4rem]':
+              stage === StageType.Over || stage === StageType.NewGame,
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
         :winner-highlight="
           outcome === OutcomeType.Won && player === ChoiceType.Scissors
@@ -149,7 +211,8 @@
       <Disk
         type="rock"
         :size="stage === StageType.PlayerChoice ? 'md' : 'lg'"
-        class="transition-top-left duration-1000"
+        class="transition-top-left-opacity duration-1000"
+        :invisible="stage === StageType.NewGame"
         :class="[
           {
             'left-0 top-[7rem] cursor-pointer':
@@ -157,9 +220,20 @@
           },
           {
             'left-[-11rem] top-[4rem]':
-              stage !== StageType.PlayerChoice && stage !== StageType.Over,
+              stage !== StageType.PlayerChoice &&
+              stage !== StageType.Over &&
+              stage !== StageType.NewGame,
           },
-          { 'left-[-19rem] top-[4rem]': stage === StageType.Over },
+          {
+            'left-[-21rem] top-[4rem]':
+              stage === StageType.Over || stage === StageType.NewGame,
+          },
+          {
+            'opacity-100': stage !== StageType.NewGame,
+          },
+          {
+            'opacity-0': stage === StageType.NewGame,
+          },
         ]"
         :winner-highlight="
           outcome === OutcomeType.Won && player === ChoiceType.Rock
@@ -167,11 +241,12 @@
         @click="onRockChoice"
       />
     </div>
+    <Outcome />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Disk } from '#components';
+import { Disk, Outcome } from '#components';
 import { storeToRefs } from 'pinia';
 import { useNotifyStore, NotificationType } from '../stores/notify.store';
 import {
@@ -197,7 +272,6 @@ const onSubmit = (event: any) => {
 
   notifyStore.notify(message, NotificationType.Error);
 };
-const onNewGame = () => gameStore.startNewGame();
 const onPaperChoice = () => gameStore.playerMove(ChoiceType.Paper);
 const onRockChoice = () => gameStore.playerMove(ChoiceType.Rock);
 const onScissorsChoice = () => gameStore.playerMove(ChoiceType.Scissors);

@@ -19,6 +19,7 @@ export enum StageType {
   ComputerChoice = '2',
   Results = '3',
   Over = '4',
+  NewGame = '5',
 }
 
 interface State {
@@ -32,6 +33,7 @@ interface State {
 
 const loadScore = (): number => {
   try {
+    if (!localStorage) throw new Error('No localStorage');
     const jsonString = localStorage.getItem('score');
     if (jsonString) {
       return JSON.parse(jsonString) as number;
@@ -70,10 +72,18 @@ export const useGameStore = defineStore('game', {
     },
     startNewGame() {
       if (this.stage !== StageType.Over) return;
-      this.stage = StageType.PlayerChoice;
-      this.player = ChoiceType.None;
-      this.computer = ChoiceType.None;
-      this.outcome = OutcomeType.None;
+      this.stage = StageType.NewGame;
+
+      const delayChoiceChange = () => {
+        this.player = ChoiceType.None;
+        this.computer = ChoiceType.None;
+        this.outcome = OutcomeType.None;
+        const delayStageChange = () => {
+          this.stage = StageType.PlayerChoice;
+        };
+        setTimeout(delayStageChange, 1000);
+      };
+      setTimeout(delayChoiceChange, 1000);
     },
     playerMove(move: ChoiceType) {
       if (this.stage !== StageType.PlayerChoice) return;
