@@ -5,12 +5,12 @@
     >
       Rules
     </h2>
-    <Rules class="mx-[2rem] mt-[2.5rem] mb-[1rem]" />
+    <SvgRules class="mx-[2rem] mt-[2.5rem] mb-[1rem]" />
   </div>
 </template>
 
 <script setup>
-import { Rules } from '#components';
+import { SvgRules } from '#components';
 </script>
 
 <style></style>
