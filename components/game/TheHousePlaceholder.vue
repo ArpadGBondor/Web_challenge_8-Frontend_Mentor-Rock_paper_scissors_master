@@ -12,7 +12,9 @@
         },
       ]"
     >
-      <div class="absolute bg-black w-[14.5rem] h-[14.5rem] rounded-full"></div>
+      <div
+        class="absolute bg-black w-[6.5rem] h-[6.5rem] md:w-[14.5rem] md:h-[14.5rem] rounded-full"
+      ></div>
     </div>
   </div>
 </template>

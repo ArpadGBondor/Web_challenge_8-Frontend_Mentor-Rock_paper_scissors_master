@@ -8,7 +8,7 @@
       Rock<br />Paper<br />Scissors
     </h2>
     <div
-      class="bg-white text-dark-blue mx-[0.15rem] md:mx-[1rem] my-[0.1rem] md:my-[0.5rem] p-1 md:p-2 w-[5.25rem] md:w-[9.25rem] rounded-md flex flex-col items-center justify-center"
+      class="bg-white text-dark-blue mx-[0.15rem] md:mx-[1rem] my-[0.1rem] md:my-[0.5rem] p-1 md:p-2 w-[5rem] md:w-[9.25rem] rounded-md flex flex-col items-center justify-center"
     >
       <div
         class="text-score-text text-[0.65rem] md:text-[1.1rem] leading-[1.2] tracking-widest mt-[0.25rem]"
