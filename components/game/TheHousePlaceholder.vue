@@ -13,7 +13,7 @@
       ]"
     >
       <div
-        class="absolute bg-black w-[6.5rem] h-[6.5rem] md:w-[14.5rem] md:h-[14.5rem] rounded-full"
+        class="absolute bg-black w-[6.5rem] h-[6.5rem] md:w-[9.5rem] md:h-[9.5rem] lg:w-[14.5rem] lg:h-[14.5rem] rounded-full"
       ></div>
     </div>
   </div>

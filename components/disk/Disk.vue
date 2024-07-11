@@ -8,7 +8,7 @@
         getSizeMeasures2,
         `shadow-${type}-sm${
           winnerHighlight ? '-winner' : ''
-        } md:shadow-${type}-${size}${winnerHighlight ? '-winner' : ''}`,
+        } lg:shadow-${type}-${size}${winnerHighlight ? '-winner' : ''}`,
         { 'opacity-100': !invisible },
       ]"
     >
@@ -85,7 +85,7 @@ const getSizeMeasures1 = computed(() => {
     case 'md':
       return 'w-[8.5rem] h-[9rem] md:w-[12.5rem] md:h-[13rem]';
     case 'lg':
-      return 'w-[8.5rem] h-[9rem] md:w-[18.5rem] md:h-[19rem]';
+      return 'w-[8.5rem] h-[9rem] md:w-[12.5rem] md:h-[13rem] lg:w-[18.5rem] lg:h-[19rem]';
     default:
       return '';
   }
@@ -95,7 +95,7 @@ const getPositions2 = computed(() => {
     case 'md':
       return 'left-[-4.25rem] top-[-4.25rem] md:left-[-6.25rem] md:top-[-6.25rem]';
     case 'lg':
-      return 'left-[-4.25rem] top-[-4.25rem] md:left-[-9.25rem] md:top-[-9.25rem]';
+      return 'left-[-4.25rem] top-[-4.25rem] md:left-[-6.25rem] md:top-[-6.25rem] lg:left-[-9.25rem] lg:top-[-9.25rem]';
     default:
       return '';
   }
@@ -105,7 +105,7 @@ const getSizeMeasures2 = computed(() => {
     case 'md':
       return 'w-[8.5rem] h-[8.5rem] md:w-[12.5rem] md:h-[12.5rem]';
     case 'lg':
-      return 'w-[8.5rem] h-[8.5rem] md:w-[18.5rem] md:h-[18.5rem]';
+      return 'w-[8.5rem] h-[8.5rem] md:w-[12.5rem] md:h-[12.5rem] lg:w-[18.5rem] lg:h-[18.5rem]';
     default:
       return '';
   }
@@ -115,7 +115,7 @@ const getSizeMeasures3 = computed(() => {
     case 'md':
       return 'w-[6.5rem] h-[6.5rem] top-[1rem] left-[1rem] shadow-disk-inner-sm md:w-[9.5rem] md:h-[9.5rem] md:top-[1.5rem] md:left-[1.5rem] md:shadow-disk-inner-md';
     case 'lg':
-      return 'w-[6.5rem] h-[6.5rem] top-[1rem] left-[1rem] shadow-disk-inner-sm md:w-[14.5rem] md:h-[14.5rem] md:top-[2rem] md:left-[2rem] md:shadow-disk-inner-lg';
+      return 'w-[6.5rem] h-[6.5rem] top-[1rem] left-[1rem] shadow-disk-inner-sm md:w-[9.5rem] md:h-[9.5rem] md:top-[1.5rem] md:left-[1.5rem] md:shadow-disk-inner-md lg:w-[14.5rem] lg:h-[14.5rem] lg:top-[2rem] lg:left-[2rem] lg:shadow-disk-inner-lg';
     default:
       return '';
   }
@@ -125,7 +125,7 @@ const getImageSize = computed(() => {
     case 'md':
       return 'w-[2.75rem] md:w-[4.5rem]';
     case 'lg':
-      return 'w-[2.75rem] md:w-[6.25rem]';
+      return 'w-[2.75rem] md:w-[4.5rem] lg:w-[6.25rem]';
     default:
       return '';
   }

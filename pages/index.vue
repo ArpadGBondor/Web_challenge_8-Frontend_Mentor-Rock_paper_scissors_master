@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute w-full h-play-area top-[10rem] md:top-[14rem] left-0 flex justify-center items-center"
+    class="absolute w-full h-play-area top-[10rem] lg:top-[14rem] left-0 flex justify-center items-center"
   >
     <GameChoiceBackground />
     <GameLabelYouPicked />

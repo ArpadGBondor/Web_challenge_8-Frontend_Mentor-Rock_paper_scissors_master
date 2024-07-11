@@ -77,11 +77,11 @@ const diskPositionStage1 = computed(() => {
   if (stage.value !== StageType.PlayerChoice) return '';
   switch (props.type) {
     case 'rock':
-      return 'left-0 top-[5rem] md:top-[6.5rem] cursor-pointer';
+      return 'left-0 top-[5rem] md:top-[5.75rem] lg:top-[6.5rem] cursor-pointer';
     case 'paper':
-      return 'left-[-6rem] top-[-5rem] md:left-[-9rem] md:top-[-7rem] cursor-pointer';
+      return 'left-[-6rem] top-[-5rem] md:left-[-7.5rem] md:top-[-6rem] lg:left-[-9rem] lg:top-[-7rem] cursor-pointer';
     case 'scissors':
-      return 'left-[6rem] top-[-5rem] md:left-[9rem] md:top-[-7rem] cursor-pointer';
+      return 'left-[6rem] top-[-5rem] md:left-[7.5rem] md:top-[-6rem] lg:left-[9rem] lg:top-[-7rem] cursor-pointer';
     default:
       return '';
   }
