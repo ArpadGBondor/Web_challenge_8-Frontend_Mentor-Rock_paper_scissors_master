@@ -11,7 +11,7 @@
       :class="[
         diskPositionStage1,
         {
-          'left-[-11rem] top-[4rem]':
+          'left-[-6rem] top-[-5rem] lg:left-[-11rem] lg:top-[4rem]':
             stage !== StageType.PlayerChoice &&
             stage !== StageType.Over &&
             stage !== StageType.NewGame,

@@ -7,7 +7,7 @@
           'left-[100vw] top-[-10rem]': player === ChoiceType.None,
         },
         {
-          'left-[11rem] top-[-10rem]':
+          'left-[6rem] top-[1.5rem] lg:left-[11rem] lg:top-[-10rem]':
             player !== ChoiceType.None &&
             (stage === StageType.PlayerChoice ||
               stage === StageType.ComputerChoice ||
@@ -27,7 +27,7 @@
       ]"
     >
       <p
-        class="text-white text-2xl tracking-widest uppercase absolute text-center"
+        class="text-white text-base lg:text-2xl tracking-widest uppercase absolute text-center"
       >
         The&nbsp;house&nbsp;picked
       </p>
