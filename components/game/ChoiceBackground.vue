@@ -1,7 +1,7 @@
 <template>
   <div class="relative left-center top-center w-0 h-0 overflow-visible">
     <img
-      class="min-w-[18rem] min-h-[14rem] left-[-9rem] top-[-7rem] absolute transition-[all] duration-1000"
+      class="min-w-[13rem] min-h-[10rem] left-[-6.5rem] top-[-5rem] md:min-w-[18rem] md:min-h-[14rem] md:left-[-9rem] md:top-[-7rem] absolute transition-[all] duration-1000"
       :class="{ 'opacity-0': stage !== StageType.PlayerChoice }"
       :src="TriangleImage"
       alt="TriangleImage"

@@ -23,17 +23,17 @@ module.exports = {
         '10vh': '10vh',
         '20vh': '20vh',
         '30vh': '30vh',
-        'play-area': 'calc(100vh - 20rem)',
+        'play-area': 'calc(100vh - 18.5rem)',
       },
       boxShadow: {
         'disk-inner-sm': 'inset 0 0.3rem rgba(0, 0, 0, 0.15)',
         'disk-inner-md': 'inset 0 0.5rem rgba(0, 0, 0, 0.15)',
         'disk-inner-lg': 'inset 0 0.75rem rgba(0, 0, 0, 0.15)',
-        'none-sm': '0 0.5rem rgba(0, 0, 0, 0.3),0 0.5rem rgba(0, 0, 0, 0.5)',
-        'rock-sm': '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(349, 71%, 52%)',
-        'paper-sm': '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(230, 89%, 62%)',
+        'none-sm': '0 0.4rem rgba(0, 0, 0, 0.3),0 0.4rem rgba(0, 0, 0, 0.5)',
+        'rock-sm': '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(349, 71%, 52%)',
+        'paper-sm': '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(230, 89%, 62%)',
         'scissors-sm':
-          '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(39, 89%, 49%)',
+          '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(39, 89%, 49%)',
         'none-md': '0 0.65rem rgba(0, 0, 0, 0.3),0 0.65rem rgba(0, 0, 0, 0.5)',
         'rock-md': '0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%)',
         'paper-md':
@@ -46,11 +46,11 @@ module.exports = {
         'scissors-lg':
           '0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(39, 89%, 49%)',
         'rock-sm-winner':
-          '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(349, 71%, 52%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
+          '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(349, 71%, 52%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
         'paper-sm-winner':
-          '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(230, 89%, 62%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
+          '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(230, 89%, 62%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
         'scissors-sm-winner':
-          '0 0.5rem rgba(0, 0, 0, 0.3), 0 0.5rem hsl(39, 89%, 49%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
+          '0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(39, 89%, 49%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
         'rock-md-winner':
           '0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%), 0 0 0rem 13rem rgba(255,255,255,0.03), 0 0 0rem 8rem rgba(255,255,255,0.03), 0 0 0rem 4rem rgba(255,255,255,0.03)',
         'paper-md-winner':
