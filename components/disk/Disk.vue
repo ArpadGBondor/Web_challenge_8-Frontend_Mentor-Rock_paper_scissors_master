@@ -16,7 +16,7 @@
       >
         <img
           :src="getTypeImage"
-          alt="Paper image"
+          :alt="`${type} image`"
           class="transition-all duration-1000"
           :class="getImageSize"
         />
@@ -31,6 +31,7 @@ import { computed } from 'vue';
 import Rock from '~/assets/images/icon-rock.svg';
 import Paper from '~/assets/images/icon-paper.svg';
 import Scissors from '~/assets/images/icon-scissors.svg';
+import Spock from '~/assets/images/icon-spock.svg';
 
 const props = defineProps({
   size: {
@@ -75,7 +76,7 @@ const getTypeImage = computed(() => {
     case 'scissors':
       return Scissors;
     default:
-      return '';
+      return Spock;
   }
 });
 const getSizeMeasures1 = computed(() => {
