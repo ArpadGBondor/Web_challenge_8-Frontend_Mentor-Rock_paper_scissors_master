@@ -6,10 +6,10 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 Users should be able to:
 
-- :heavy_check_mark: View the optimal layout for the game depending on their device's screen size
-- :heavy_check_mark: Play Rock, Paper, Scissors against the computer
-- :heavy*check_mark: Maintain the state of the score after refreshing the browser *(optional)\_
-- :x: **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
+- ✔️ View the optimal layout for the game depending on their device's screen size
+- ✔️ Play Rock, Paper, Scissors against the computer
+- ✔️ Maintain the state of the score after refreshing the browser *(optional)\_
+- ❌ **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 ## Used tools
 
@@ -19,10 +19,10 @@ Users should be able to:
 
 ## My goals
 
-- :heavy_check_mark: I want to create a Rock, Paper, Scissors application
-- :heavy_check_mark: I want to practise Vue 3 and Nuxt 3 state management
-- :x: I want to create a "mobile first" design, and only using Tailwind without any custom CSS
-  - Sadly, I encountered a Tailwind error that required some custom CSS workaround. :slightly_frowning_face:
+- ✔️ I want to create a Rock, Paper, Scissors application
+- ✔️ I want to practise Vue 3 and Nuxt 3 state management
+- ❌ I want to create a "mobile first" design, and only using Tailwind without any custom CSS
+  - Sadly, I encountered a Tailwind error that required some custom CSS workaround. 🙁
 
 ## Highlights
 
