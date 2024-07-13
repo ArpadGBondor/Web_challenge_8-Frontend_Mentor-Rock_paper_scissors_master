@@ -7,7 +7,7 @@
           'left-[0] top-[100vh]': stage !== StageType.Over,
         },
         {
-          'left-[0] top-[3rem]': stage === StageType.Over,
+          'left-[0] top-[10rem] lg:top-[3rem]': stage === StageType.Over,
         },
       ]"
     >

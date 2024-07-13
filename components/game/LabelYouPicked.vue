@@ -7,14 +7,14 @@
           'left-[-100vw] top-[-10rem]': player === ChoiceType.None,
         },
         {
-          'left-[-6rem] top-[1.5rem] lg:left-[-11rem] lg:top-[-10rem]':
+          'left-[-6rem] top-[1.5rem] md:left-[-8rem] md:top-[2rem] lg:left-[-11rem] lg:top-[-10rem]':
             player !== ChoiceType.None &&
             (stage === StageType.PlayerChoice ||
               stage === StageType.ComputerChoice ||
               stage === StageType.Results),
         },
         {
-          'left-[-21rem] top-[-10rem]':
+          'left-[-6rem] top-[1.5rem] md:left-[-8rem] md:top-[2rem] lg:left-[-21rem] lg:top-[-10rem]':
             stage === StageType.Over ||
             (stage === StageType.NewGame && player !== ChoiceType.None),
         },
@@ -27,7 +27,7 @@
       ]"
     >
       <p
-        class="text-white text-base lg:text-2xl tracking-widest uppercase absolute text-center"
+        class="text-white text-base md:text-xl lg:text-2xl tracking-widest uppercase absolute text-center"
       >
         You&nbsp;picked
       </p>

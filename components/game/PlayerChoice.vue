@@ -11,13 +11,13 @@
       :class="[
         diskPositionStage1,
         {
-          'left-[-6rem] top-[-5rem] lg:left-[-11rem] lg:top-[4rem]':
+          'left-[-6rem] top-[-5rem] md:left-[-8rem] md:top-[-7rem] lg:left-[-11rem] lg:top-[4rem]':
             stage !== StageType.PlayerChoice &&
             stage !== StageType.Over &&
             stage !== StageType.NewGame,
         },
         {
-          'left-[-21rem] top-[4rem]':
+          'left-[-6rem] top-[-5rem] md:left-[-8rem] md:top-[-7rem] lg:left-[-21rem] lg:top-[4rem]':
             stage === StageType.Over || stage === StageType.NewGame,
         },
         {
@@ -77,11 +77,11 @@ const diskPositionStage1 = computed(() => {
   if (stage.value !== StageType.PlayerChoice) return '';
   switch (props.type) {
     case 'rock':
-      return 'left-0 top-[4.5rem] md:top-[5.5rem] lg:top-[6.5rem] cursor-pointer';
+      return 'left-0 top-[4.5rem] md:top-[6.5rem] cursor-pointer';
     case 'paper':
-      return 'left-[-5.5rem] top-[-4.5rem] md:left-[-7.25rem] md:top-[-5.75rem] lg:left-[-9rem] lg:top-[-7rem] cursor-pointer';
+      return 'left-[-5.5rem] top-[-4.5rem] md:left-[-9rem] md:top-[-7rem] cursor-pointer';
     case 'scissors':
-      return 'left-[5.5rem] top-[-4.5rem] md:left-[7.25rem] md:top-[-5.75rem] lg:left-[9rem] lg:top-[-7rem] cursor-pointer';
+      return 'left-[5.5rem] top-[-4.5rem] md:left-[9rem] md:top-[-7rem] cursor-pointer';
     default:
       return '';
   }

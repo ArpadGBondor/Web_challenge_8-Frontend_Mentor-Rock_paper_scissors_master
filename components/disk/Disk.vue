@@ -6,9 +6,7 @@
         getPositions2,
         getTypeColours,
         getSizeMeasures2,
-        `shadow-${type}-sm${
-          winnerHighlight ? '-winner' : ''
-        } lg:shadow-${type}-${size}${winnerHighlight ? '-winner' : ''}`,
+        `shadow-${type}-${size}${winnerHighlight ? '-winner' : ''}`,
         { 'opacity-100': !invisible },
       ]"
     >
@@ -132,4 +130,124 @@ const getImageSize = computed(() => {
 });
 </script>
 
-<style></style>
+<style>
+/**
+* I've experienced an error, where adding shadows using (md: lg:) media 
+* queries didn't work in Tailwind, so I ended up adding shadows with custom CSS.
+* It's a shame, because I was aiming not to use any custom CSS in this project.
+*/
+.shadow-none-md {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem rgba(0, 0, 0, 0.5);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem rgba(0, 0, 0, 0.5);
+  }
+}
+.shadow-none-lg {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem rgba(0, 0, 0, 0.5);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem rgba(0, 0, 0, 0.5);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem rgba(0, 0, 0, 0.5);
+  }
+}
+.shadow-rock-md {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(349, 71%, 52%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%);
+  }
+}
+.shadow-rock-lg {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(349, 71%, 52%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(349, 71%, 52%);
+  }
+}
+.shadow-rock-lg-winner {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(349, 71%, 52%),
+    0 0.2rem 0rem 4.6rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 2.9rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 1.1rem rgba(255, 255, 255, 0.03);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(349, 71%, 52%),
+      0 0 0rem 9rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 5rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 2rem rgba(255, 255, 255, 0.03);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(349, 71%, 52%),
+      0 0 0rem 13rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 8rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 4rem rgba(255, 255, 255, 0.03);
+  }
+}
+.shadow-paper-md {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(230, 89%, 62%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(230, 89%, 62%);
+  }
+}
+.shadow-paper-lg {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(230, 89%, 62%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(230, 89%, 62%);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(230, 89%, 62%);
+  }
+}
+.shadow-paper-lg-winner {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(230, 89%, 62%),
+    0 0.2rem 0rem 4.6rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 2.9rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 1.1rem rgba(255, 255, 255, 0.03);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(230, 89%, 62%),
+      0 0 0rem 9rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 5rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 2rem rgba(255, 255, 255, 0.03);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(230, 89%, 62%),
+      0 0 0rem 13rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 8rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 4rem rgba(255, 255, 255, 0.03);
+  }
+}
+.shadow-scissors-md {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(39, 89%, 49%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(39, 89%, 49%);
+  }
+}
+.shadow-scissors-lg {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(39, 89%, 49%);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(39, 89%, 49%);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(39, 89%, 49%);
+  }
+}
+.shadow-scissors-lg-winner {
+  box-shadow: 0 0.4rem rgba(0, 0, 0, 0.3), 0 0.4rem hsl(39, 89%, 49%),
+    0 0.2rem 0rem 4.6rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 2.9rem rgba(255, 255, 255, 0.03),
+    0 0.2rem 0rem 1.1rem rgba(255, 255, 255, 0.03);
+  @media (min-width: 768px) {
+    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.3), 0 0.65rem hsl(39, 89%, 49%),
+      0 0 0rem 9rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 5rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 2rem rgba(255, 255, 255, 0.03);
+  }
+  @media (min-width: 1024px) {
+    box-shadow: 0 0.8rem rgba(0, 0, 0, 0.3), 0 0.8rem hsl(39, 89%, 49%),
+      0 0 0rem 13rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 8rem rgba(255, 255, 255, 0.03),
+      0 0 0rem 4rem rgba(255, 255, 255, 0.03);
+  }
+}
+</style>

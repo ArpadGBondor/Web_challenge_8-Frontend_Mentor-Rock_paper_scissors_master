@@ -16,11 +16,11 @@
       class="transition-top-left-opacity duration-1000"
       :class="[
         {
-          'left-[6rem] top-[-5rem] lg:left-[11rem] lg:top-[4rem]':
+          'left-[6rem] top-[-5rem] md:left-[8rem] md:top-[-7rem] lg:left-[11rem] lg:top-[4rem]':
             stage !== StageType.Over && stage !== StageType.NewGame,
         },
         {
-          'left-[19rem] top-[4rem]':
+          'left-[6rem] top-[-5rem] md:left-[8rem] md:top-[-7rem] lg:left-[19rem] lg:top-[4rem]':
             stage === StageType.Over || stage === StageType.NewGame,
         },
         {
