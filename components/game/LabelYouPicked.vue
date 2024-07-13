@@ -4,7 +4,8 @@
       class="relative w-0 h-0 flex justify-center items-center transition-top-left-opacity duration-1000"
       :class="[
         {
-          'left-[-100vw] top-[-10rem]': player === ChoiceType.None,
+          'left-[-100vw] top-[1.5rem] md:top-[2rem] lg:top-[-10rem]':
+            player === ChoiceType.None,
         },
         {
           'left-[-6rem] top-[1.5rem] md:left-[-8rem] md:top-[2rem] lg:left-[-11rem] lg:top-[-10rem]':
