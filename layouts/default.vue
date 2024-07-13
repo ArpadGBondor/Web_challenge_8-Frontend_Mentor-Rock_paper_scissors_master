@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     class="bg-game flex flex-col justify-center items-center h-screen w-screen text-white absolute top-0 left-0 font-[BarlowSemiCondensed-SemiBold] overflow-hidden"
   >
     <Header />
@@ -8,7 +8,7 @@
     <RulesButton />
     <Footer />
     <Modal :show="showRules" @update:show="gameStore.setShowRules($event)" />
-  </div>
+  </main>
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <section
+  <header
     class="absolute top-[1.9rem] lg:top-[3rem] self-center w-[19.75rem] md:w-[30rem] lg:w-[44rem] border-[3px] border-border-gray rounded-md lg:rounded-2xl p-2 flex flex-row justify-between items-stretch uppercase"
   >
     <h2
@@ -21,7 +21,7 @@
         {{ `${score}` }}
       </div>
     </div>
-  </section>
+  </header>
 </template>
 
 <script setup lang="ts">
