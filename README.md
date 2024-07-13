@@ -8,7 +8,7 @@ Users should be able to:
 
 - :heavy_check_mark: View the optimal layout for the game depending on their device's screen size
 - :heavy_check_mark: Play Rock, Paper, Scissors against the computer
-- :heavy*check_mark: Maintain the state of the score after refreshing the browser *(optional)\_
+- :heavy_check_mark: Maintain the state of the score after refreshing the browser \*(optional)\_
 - :x: **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 ## Used tools
